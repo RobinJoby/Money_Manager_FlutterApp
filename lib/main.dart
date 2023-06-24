@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:money_management/models/category/category_model.dart';
 import 'package:money_management/screens/home/screen_home.dart';
+import 'package:money_management/screens/transactions/screen_add_transaction.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,8 +25,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: ScreenHome(),
+    return MaterialApp(
+      home:const ScreenHome(),
+      routes: {
+        ScreenAddTransaction.routeName:(ctx){
+          return const ScreenAddTransaction();
+        }
+      },
     );
   }
 }
