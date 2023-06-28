@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:money_management/db/category/category_db.dart';
-import 'package:money_management/models/category/category_model.dart';
+
 import 'package:money_management/screens/category/category_add_popup.dart';
 import 'package:money_management/screens/category/screen_category.dart';
 import 'package:money_management/screens/home/widgets/bottom_navigation.dart';
