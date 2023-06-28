@@ -23,22 +23,7 @@ class ScreenTransactions extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               itemBuilder: (ctx, index) {
                 final _value = newList[index];
-                return Stack(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Text("Do you want to delete?"),
-                          Row(
-                            children: [
-                              TextButton(onPressed: () {}, child: Text('No')),
-                              TextButton(onPressed: () {}, child: Text('Yes'))
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
+                return 
                     Slidable(
                       key: Key(_value.id!),
                       startActionPane: ActionPane(
@@ -65,9 +50,7 @@ class ScreenTransactions extends StatelessWidget {
                           subtitle: Text(_value.category.name),
                         ),
                       ),
-                    ),
-                  ],
-                );
+                    );              
               },
               separatorBuilder: (ctx, index) {
                 return const SizedBox(
